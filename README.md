@@ -1,46 +1,128 @@
-# Getting Started with Create React App
+# Photo Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive portfolio website built with React, TypeScript, and Material-UI to showcase photography work.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Responsive design that works on all devices
+- Modern UI with smooth animations using Framer Motion
+- Photo gallery with filtering capabilities
+- Contact form with validation
+- About section with skills and equipment
+- Social media integration
+- Dark mode theme
 
-### `npm start`
+## Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Node.js (v14 or higher)
+- npm (v6 or higher)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+1. Clone the repository:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone <your-repository-url>
+cd photo-portfolio
+```
 
-### `npm run build`
+2. Install dependencies:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Start the development server:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm start
+```
 
-### `npm run eject`
+The website will be available at `http://localhost:3000`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Building for Production
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To create a production build:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+npm run build
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This will create an optimized production build in the `build` folder.
 
-## Learn More
+## Deployment
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Option 1: Deploy to Netlify
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Create a Netlify account if you don't have one
+2. Install Netlify CLI:
+
+```bash
+npm install -g netlify-cli
+```
+
+3. Deploy:
+
+```bash
+netlify deploy
+```
+
+### Option 2: Deploy to Vercel
+
+1. Create a Vercel account if you don't have one
+2. Install Vercel CLI:
+
+```bash
+npm install -g vercel
+```
+
+3. Deploy:
+
+```bash
+vercel
+```
+
+### Option 3: Deploy to GitHub Pages
+
+1. Add the following to your `package.json`:
+
+```json
+{
+  "homepage": "https://yourusername.github.io/photo-portfolio",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  }
+}
+```
+
+2. Install gh-pages:
+
+```bash
+npm install --save-dev gh-pages
+```
+
+3. Deploy:
+
+```bash
+npm run deploy
+```
+
+## Customization
+
+1. Replace the placeholder images in the `src/pages` components with your own photos
+2. Update the content in `About.tsx` with your personal information
+3. Modify the theme colors in `App.tsx`
+4. Update social media links in `Contact.tsx`
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
