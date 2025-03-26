@@ -19,7 +19,7 @@ import { photos, Photo } from '../data/photos';
 
 const MotionCard = motion(Card);
 
-const categories = ['All', 'Nature', 'Portrait', 'Architecture', 'Street', 'Abstract'];
+const categories = ['All', 'Local', 'Architecture', 'Street', 'Abstract'];
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');

@@ -12,17 +12,17 @@ export interface Photo {
 export const photos: Photo[] = [
   {
     id: 1,
-    title: 'Mountain Sunset',
-    image: 'https://res.cloudinary.com/daohmpe2h/image/upload/v1743020585/fowrzizqrmcz2kyvgii1.jpg',
-    category: 'Nature',
-    description: 'A breathtaking sunset over the mountains.',
+    title: 'Pink Moon',
+    image: 'https://res.cloudinary.com/daohmpe2h/image/upload/v1743022240/PinkMoon.jpg',
+    category: 'Local',
+    description: 'A beautiful pink moon captured in the night sky.',
   },
   {
     id: 2,
-    title: 'Urban Portrait',
-    image: 'https://source.unsplash.com/random/800x600?portrait',
-    category: 'Portrait',
-    description: 'Street photography capturing urban life.',
+    title: 'Dark Tree',
+    image: 'https://res.cloudinary.com/daohmpe2h/image/upload/v1743022239/DarkTree.jpg',
+    category: 'Local',
+    description: 'A striking silhouette of a tree against the sky.',
   },
   {
     id: 3,
