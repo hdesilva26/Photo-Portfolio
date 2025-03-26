@@ -14,6 +14,7 @@ import {
   Box,
   useTheme,
   useMediaQuery,
+  Avatar,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
@@ -57,8 +58,15 @@ const Navbar = () => {
           component="div"
           sx={{ flexGrow: 1, fontWeight: 'bold' }}
         >
-          Photo Portfolio
+          WOODBRIDGE CLUB
         </Typography>
+
+        {/* Logo */}
+        <Avatar
+          src="https://source.unsplash.com/random/100x100?logo"
+          alt="Woodbridge Club Logo"
+          sx={{ width: 40, height: 40, mx: 2 }}
+        />
 
         {isMobile ? (
           <>

@@ -59,6 +59,9 @@ const Contact = () => {
 
   return (
     <Container sx={{ py: 8 }}>
+      <Typography variant="h2" align="center" gutterBottom>
+        Contact Me
+      </Typography>
       <Grid container spacing={4}>
         {/* Contact Information */}
         <Grid item xs={12} md={4}>

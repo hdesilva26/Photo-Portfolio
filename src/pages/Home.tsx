@@ -52,10 +52,10 @@ const Home = () => {
             transition={{ duration: 0.8 }}
           >
             <Typography variant="h1" gutterBottom>
-              Welcome to My Photo Portfolio
+              Welcome to the Woodbridge Club
             </Typography>
             <Typography variant="h5" gutterBottom>
-              Capturing moments, telling stories through photography
+              A collection of photos I've taken
             </Typography>
             <Button
               variant="contained"
