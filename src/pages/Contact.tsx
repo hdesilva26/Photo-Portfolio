@@ -1,22 +1,19 @@
 import React, { useState } from 'react';
 import {
-  Box,
   Container,
   Typography,
   Grid,
   Paper,
   TextField,
   Button,
-  Stack,
-  IconButton,
+  Box,
   Snackbar,
   Alert,
 } from '@mui/material';
 import { motion } from 'framer-motion';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
 
 const MotionPaper = motion(Paper);
 
@@ -34,11 +31,10 @@ const Contact = () => {
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -54,14 +50,11 @@ const Contact = () => {
   };
 
   const handleCloseSnackbar = () => {
-    setSnackbar((prev) => ({ ...prev, open: false }));
+    setSnackbar({ ...snackbar, open: false });
   };
 
   return (
     <Container sx={{ py: 8 }}>
-      <Typography variant="h2" align="center" gutterBottom>
-        Contact Me
-      </Typography>
       <Grid container spacing={4}>
         {/* Contact Information */}
         <Grid item xs={12} md={4}>
@@ -75,35 +68,24 @@ const Contact = () => {
               Get in Touch
             </Typography>
             <Typography variant="body1" paragraph>
-              I'm always interested in hearing about new projects and opportunities.
-              Feel free to reach out!
+              I'd love to hear from you! Whether you're interested in a photo
+              session, have questions about my work, or just want to say hello,
+              feel free to reach out.
             </Typography>
 
-            <Stack spacing={2} sx={{ mt: 4 }}>
-              <Typography variant="h6">Contact Information</Typography>
-              <Typography>Email: contact@photoportfolio.com</Typography>
-              <Typography>Phone: +1 (555) 123-4567</Typography>
-              <Typography>Location: New York, NY</Typography>
-            </Stack>
-
             <Box sx={{ mt: 4 }}>
-              <Typography variant="h6" gutterBottom>
-                Follow Me
-              </Typography>
-              <Stack direction="row" spacing={2}>
-                <IconButton color="primary" aria-label="Instagram">
-                  <InstagramIcon />
-                </IconButton>
-                <IconButton color="primary" aria-label="Facebook">
-                  <FacebookIcon />
-                </IconButton>
-                <IconButton color="primary" aria-label="Twitter">
-                  <TwitterIcon />
-                </IconButton>
-                <IconButton color="primary" aria-label="LinkedIn">
-                  <LinkedInIcon />
-                </IconButton>
-              </Stack>
+              <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                <LocationOnIcon sx={{ mr: 1 }} />
+                <Typography>123 Photography Street, City, Country</Typography>
+              </Box>
+              <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                <EmailIcon sx={{ mr: 1 }} />
+                <Typography>contact@example.com</Typography>
+              </Box>
+              <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                <PhoneIcon sx={{ mr: 1 }} />
+                <Typography>+1 (234) 567-8900</Typography>
+              </Box>
             </Box>
           </MotionPaper>
         </Grid>
@@ -120,7 +102,7 @@ const Contact = () => {
               Send a Message
             </Typography>
             <form onSubmit={handleSubmit}>
-              <Grid container spacing={3}>
+              <Grid container spacing={2}>
                 <Grid item xs={12} sm={6}>
                   <TextField
                     required
